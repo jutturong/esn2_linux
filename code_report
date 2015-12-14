@@ -1,0 +1,124 @@
+<script type="text/javascript">
+    $(function()
+    {
+        //alert('t');
+         $('#btn_report').button({ icons:{primary:'ui-icon-document'},text:true }).click(function()
+         {
+             $('#dialog_report').dialog({
+                 resizeable:false,
+                 height:300,
+                 width:700,
+                 modal:true,
+                 buttons:{
+                     "Search":function()
+                     {                 
+                          // $(this).dialog('close');
+                           //alert('t');
+                           //window.location.href("../../../report_pdf/appendix_report/report_hn.php");
+                           //window.open('../../../report_pdf/appendix_report/report_hn.php','mywindow','width=400,height=200');
+                           var  begin=$('#from_date').val();
+                           var  end=$('#to_date').val();
+                           
+                           
+                           var  Demographic=$('#Demographic').val();
+                           var  Drug=$('#Drug').val();
+                           var  Pharmacist=$('#Pharmacist').val();
+                           var  HN=$('#HN_ep').val();
+                        //   alert(''+Ambulatory);
+                       //    alert(''+Drug);
+                       
+                      // var  choice1=jQuery('input:radio[name="checkreport"]').filter('[value="1"]').attr('checked',true);
+                       var  choice1=jQuery('input:radio[name="checkreport"]').filter('[value="1"]');
+                       var  choice2=jQuery('input:radio[name="checkreport"]').filter('[value="2"]');
+                       var  choice3=jQuery('input:radio[name="checkreport"]').filter('[value="3"]');
+                       
+                  //  if(   $('#Demographic').attr('checked')  ||    $('#Drug').attr('checked')  ||   $('#Pharmacist').attr('checked')     )   
+                       if( choice1.attr('checked')   )   
+                     {       
+                          // alert(''+ Demographic);
+                           //  alert('1');
+                           //alert(''+choice1.val());
+                           var  checkreport_ =  choice1.val();
+                          // window.open('../../../report_pdf/appendix_report/report_hn.php?begin=' + begin + '&end=' +  end ,'mywindow','');//ของเดิม
+                         //  window.open('../../../report_pdf/appendix_report/query_report_esn.php?begin=' + begin + '&end=' +  end ,'mywindow',''); //ปรับปรุง query จากวันที่ เดือน ปี
+                       // /* report 2-11-57 */     window.open('../../../report_pdf/appendix_report/query_report_esn_merge.php?begin=' + begin + '&end=' +  end ,'mywindow',''); //#query by merg table    
+         //   $(this).dialog('close');                      
+      //    window.open('../../../report_pdf/appendix_report/switch_report.php?begin=' + begin + '&end=' +  end +'&Demographic='  + Demographic + '&Drug=' +  Drug + '&Pharmacist=' + Pharmacist  ,'mywindow',''); //#query by merg table 
+             $(this).dialog('close');     
+            window.open('../../../report_pdf/appendix_report/switch_report.php?begin=' + begin + '&end=' +  end +  '&HN='  +  HN + '&checkreport=' + checkreport_  ,'mywindow',''); //#query by merg table                       
+                    }
+                    else if(  choice2.attr('checked')   )
+                    {
+                            //alert(''+choice2.val());
+                           var  checkreport_ =  choice2.val();
+                                    $(this).dialog('close');     
+            window.open('../../../report_pdf/appendix_report/switch_report.php?begin=' + begin + '&end=' +  end +  '&HN='  +  HN +  '&checkreport=' + checkreport_  ,'mywindow',''); //#query by merg table   
+                    }
+                    else if ( choice3.attr('checked')  )
+                    {
+                          // alert(''+choice3.val());
+                           var  checkreport_ =  choice3.val();
+                                        $(this).dialog('close');     
+            window.open('../../../report_pdf/appendix_report/switch_report.php?begin=' + begin + '&end=' +  end  + '&HN='  +  HN +   '&checkreport=' + checkreport_  ,'mywindow',''); //#query by merg table  
+                    }
+                   else if( !choice1.attr('checked')  &&  !choice2.attr('checked')  && !choice3.attr('checked') )
+                   {
+                           alert('Click  Ambulatory car clinic or Drug level result !!'); 
+                       
+                   }
+                     
+                     
+                      },Cancel:function()
+    {
+        $(this).dialog('close');
+    }
+                 }
+             });
+         });
+    })
+    </script>
+
+#======================================================================
+<div id="dialog_report"  title="Report ESN System"  style="display: none">
+        <!--
+        <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;">        
+         </span>
+        -->
+        Plese specify information for report
+        <?php echo  br(); ?>
+        <lable>HN: </lable>
+
+          <input name="HN_ep2" type="text" onblur="fill_ep2();" onkeyup="lookup_ep2(this.value);"    id="HN_ep2" size="20" maxlength="6" class="search" />  
+
+          <!--============================= autocomplete-->              
+<div class="suggestionsBox" id="suggestions_ep2" style="display: none; margin-left:400px;" align="left" >
+         <img src="<?=base_url()?>images/upArrow.png" style="position: relative; top: -12px; left: 30px;" alt="upArrow" />
+        <div class="suggestionList" id="autoSuggestionsList_ep2">
+                </div>
+ </div>
+<!--============================= autocomplete-->
+
+        <?php echo br(); ?>
+         Form Date :
+         <input name="from_date" type="text" id="from_date"   readonly="true" style="width:20%" size="10" maxlength="20" />
+         
+         To :
+         <input name="to_date" type="text" id="to_date"  readonly="true"  style="width:20%" size="10" maxlength="20" />
+         
+         
+             
+         
+         <ul>     
+             <input type="radio" id="Demographic" value="1" name="checkreport" /> Demographic                
+         </ul>
+          <ul>     
+                   <input type="radio" id="Drug" value="2" name="checkreport"  /> Drug Related Problem           
+         </ul>
+         <ul>       
+              <input type="radio" id="Pharmacist" value="3" name="checkreport"  /> Pharmacist Action 
+         </ul>
+        
+    </div>
+
+
+
