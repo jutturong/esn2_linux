@@ -29,9 +29,9 @@
                 <td>
                     <input class="easyui-datebox"  id="from_date"
                            required
-                           data-options="
-                           validType:'md[\'10-11-2012\']' ,
-                           " ></input>
+                           data-options="  " >
+                               
+                    </input>
                     
                     
                 </td>
@@ -41,9 +41,9 @@
                 <td>
                     <input class="easyui-datebox"  id="to_date"
                            required
-                           data-options="
-                           validType:'md[\'10-11-2012\']' ,
-                           " ></input>
+                           data-options="  " >
+                               
+                    </input>
                 </td>
                 
             </tr>
@@ -68,12 +68,10 @@
         </tr>
         
         <tr>
-            <td >
-                <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" href="javascript:void(0)" onclick="javascript:alert('ok')" style="width:80px">Ok</a>
+            <td colspan="2">
+                <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" href="javascript:void(0)" onclick="javascript:alert('ok')" style="width:80px">Search</a>
               
-            </td>
-            <td>
-                  <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" onclick="javascript:alert('cancel')" style="width:80px">Cancel</a>
+                 <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" onclick="javascript:alert('cancel')" style="width:80px">Close</a>
             </td>
         </tr>
             
