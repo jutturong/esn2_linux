@@ -1,18 +1,21 @@
+<!--  31-12-2558  -->
 
-    <script type="text/javascript">
-                 function myformatter(date){
-            var y = date.getFullYear()+543;
-            var m = date.getMonth()+1;
-            var d = date.getDate();
-           // return y+'-'+(m<10?('0'+m):m)+'-'+(d<10?('0'+d):d);
-           // return  (m<10?('0'+m):m)+'-'+(d<10?('0'+d):d) + '-' + y  ;
-           return  m + '-' + d + '-' + y;
-        }
-    </script>
+
+<script type="text/javascript">
+    $(function()
+    {
+          $('#from_date').datebox('calendar').calendar({
+               validator:function(date){
+                     
+               }
+          });
+    });
+</script>
+    
     
 <div id="win_report" class="easyui-window" title=" Report ESN System ( ออกผลรายงาน ) " 
      data-options="
-                              iconCls:'icon-clipart' ,
+                              iconCls:'icon-large-picture' ,
                               size:'large',
                               iconAlign:'top',
                               modal:true,closed:true,
@@ -29,9 +32,9 @@
             <tr>
                 <td>From Date :</td>
                 <td>
-                    <input class="easyui-datebox"  id="from_date"
-                           required
-                           data-options="  " >
+                    <input class="easyui-datebox"  id="from_date"    required ata-options="buttons:buttons" >
+                        
+                           
                                
                     </input>
                     
@@ -41,9 +44,9 @@
                     To :
                 </td>
                 <td>
-                    <input class="easyui-datebox"  id="to_date"
-                           required
-                           data-options="  " >
+                    <input class="easyui-datebox"  id="to_date"    required  ata-options="buttons:buttons" >
+                        
+                           
                                
                     </input>
                 </td>
