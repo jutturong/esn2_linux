@@ -10,9 +10,11 @@
         }
     </script>
     
-<div id="win_report" class="easyui-window" title="Report ESN System" 
+<div id="win_report" class="easyui-window" title=" Report ESN System ( ออกผลรายงาน ) " 
      data-options="
-                              iconCls:'icon-save' , 
+                              iconCls:'icon-clipart' ,
+                              size:'large',
+                              iconAlign:'top',
                               modal:true,closed:true,
                               minimizable:false,
                               maximizable:false,
