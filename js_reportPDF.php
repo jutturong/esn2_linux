@@ -42,7 +42,7 @@
             <tr>
                 <td>From Date :</td>
                 <td>
-                    <input class="easyui-datebox"  id="from_date"    required ata-options="buttons:buttons" >
+                    <input class="easyui-datebox"  id="from_date"   required="required"    >
                         
                            
                                
@@ -54,7 +54,7 @@
                     To :
                 </td>
                 <td>
-                    <input class="easyui-datebox"  id="to_date"    required  ata-options="buttons:buttons" >
+                    <input class="easyui-datebox"  id="to_date"   required="required"   >
                         
                            
                                
