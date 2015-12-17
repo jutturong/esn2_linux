@@ -31,7 +31,9 @@
         {
              $('#fr_report').form('submit',{
                  onSubmit:function(){
-                      alert('t');
+                    
+                  
+                      window.open("http://drugstore.kku.ac.th/report_pdf/appendix_report/query_report_esn_merge.php?begin=01-12-2547&end=18-12-2558&HN=undefined");
                  }
              });
         }
@@ -62,7 +64,8 @@
             <tr>
                 <td>From Date :</td>
                 <td>
-                    <input class="easyui-datebox"  id="from_date"   required="required"  data-options="formatter:myformatter,parser:myparser"  >
+                   <!-- <input class="easyui-datebox"  id="from_date"   required="required"  data-options="formatter:myformatter,parser:myparser"  > -->
+                      <input class="easyui-datebox"  id="from_date"   required="required"   >
                     </input>
                     
                     
@@ -71,7 +74,8 @@
                     To :
                 </td>
                 <td>
-                    <input class="easyui-datebox"  id="to_date"   required="required"   data-options="formatter:myformatter,parser:myparser" >
+                 <!--   <input class="easyui-datebox"  id="to_date"   required="required"   data-options="formatter:myformatter,parser:myparser" > -->
+                     <input class="easyui-datebox"  id="to_date"   required="required"    >
                     </input>
                     
                     
