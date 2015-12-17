@@ -2,14 +2,7 @@
 
 
 <script type="text/javascript">
-    $(function()
-    {
-          $('#from_date').datebox('calendar').calendar({
-               validator:function(date){
-                     
-               }
-          });
-    });
+
 </script>
     
     
@@ -72,6 +65,7 @@
             </td>
         </tr>
         
+        <!--
         <tr>
             <td colspan="2">
                 <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" href="javascript:void(0)" onclick="javascript:alert('ok')" style="width:80px">Search</a>
@@ -79,6 +73,7 @@
                  <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" onclick="javascript:alert('cancel')" style="width:80px">Close</a>
             </td>
         </tr>
+        -->
             
         </table>
     </form>
