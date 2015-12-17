@@ -31,9 +31,19 @@
         {
              $('#fr_report').form('submit',{
                  onSubmit:function(){
+                      var  from_date=$('#from_date').datebox('getValue');
+                     var   to_date=$('#to_date').datebox('getValue');
+
+                    var begin_arr=from_date.split("/");  //12/17/2015->begin=01-12-2547
+                    var  y= parseInt(begin_arr[2])+543;
+                   var   begin=begin_arr[1] + "-" + begin_arr[0] + "-" + y;
                     
-                  
-                      window.open("http://drugstore.kku.ac.th/report_pdf/appendix_report/query_report_esn_merge.php?begin=01-12-2547&end=18-12-2558&HN=undefined");
+                   var  end_arr=to_date.split("/");
+                    var   yy=parseInt(end_arr)+543;
+                    var  end=end_arr[1] + "-" + end_arr[0] + "-" + yy;
+                          //  alert( begin );
+                           //    alert( end );              
+                          window.open("http://drugstore.kku.ac.th/report_pdf/appendix_report/query_report_esn_merge.php?begin=" +  begin   + "&end="  +  end    +      "&HN=undefined");
                  }
              });
         }
