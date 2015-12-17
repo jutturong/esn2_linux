@@ -27,6 +27,18 @@
             }
         }
         
+        function submitForm()
+        {
+             $('#fr_report').form('submit',{
+                 onSubmit:function(){
+                      alert('t');
+                 }
+             });
+        }
+        function cancleform()
+        {
+            $('#win_report').window('close');
+        }
         
     </script>
     
@@ -99,8 +111,8 @@
         <tr>
             <td colspan="2" >
                 <?=nbs(40)?>
-                  <a class="easyui-linkbutton" data-options="iconCls:'icon-search'" href="javascript:void(0)"  style="width:80px">Search</a>
-                   <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)"  style="width:80px">Close</a>
+                <a class="easyui-linkbutton" data-options="iconCls:'icon-search'" href="javascript:void(0)"  style="width:80px" onclick="submitForm()">Search</a>
+                <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)"  style="width:80px" onclick="cancleform()">Close</a>
             </td>
         </tr>
             
