@@ -2,25 +2,32 @@
 
 
     <script type="text/javascript">
+        
+        
+        
         function myformatter(date){
             var y = date.getFullYear();
             var m = date.getMonth()+1;
             var d = date.getDate();
-           // return y+'-'+(m<10?('0'+m):m)+'-'+(d<10?('0'+d):d);
+     
           return y+'-'+(m<10?('0'+m):m)+'-'+(d<10?('0'+d):d);
+          //return (d<10?('0'+d):d)+'-'+(m<10?('0'+m):m)+'-'+y;
         }
         function myparser(s){
             if (!s) return new Date();
             var ss = (s.split('-'));
-            var y = parseInt(ss[0],10) + 543;
+            var y = parseInt(ss[0],10);
             var m = parseInt(ss[1],10);
             var d = parseInt(ss[2],10);
             if (!isNaN(y) && !isNaN(m) && !isNaN(d)){
-                return new Date(y,m-1,d);
+                 return new Date(y,m-1,d);
+               //   return new Date(d,m-1,y);
             } else {
                 return new Date();
             }
         }
+        
+        
     </script>
     
     
@@ -36,7 +43,7 @@
                               collapsible:false,
                               
                               " 
-     style="width:600px;height: 300px">
+     style="width:600px;height: 210px">
     <form id="fr_report" method="post">
         <table cellpadding="5">
   
@@ -44,9 +51,6 @@
                 <td>From Date :</td>
                 <td>
                     <input class="easyui-datebox"  id="from_date"   required="required"  data-options="formatter:myformatter,parser:myparser"  >
-                        
-                           
-                               
                     </input>
                     
                     
@@ -55,11 +59,10 @@
                     To :
                 </td>
                 <td>
-                    <input class="easyui-datebox"  id="to_date"   required="required"   >
-                        
-                           
-                               
+                    <input class="easyui-datebox"  id="to_date"   required="required"   data-options="formatter:myformatter,parser:myparser" >
                     </input>
+                    
+                    
                 </td>
                 
             </tr>
@@ -92,6 +95,14 @@
             </td>
         </tr>
         -->
+        
+        <tr>
+            <td colspan="2" >
+                <?=nbs(40)?>
+                  <a class="easyui-linkbutton" data-options="iconCls:'icon-search'" href="javascript:void(0)"  style="width:80px">Search</a>
+                   <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)"  style="width:80px">Close</a>
+            </td>
+        </tr>
             
         </table>
     </form>
