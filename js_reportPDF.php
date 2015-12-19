@@ -41,9 +41,47 @@
                    var  end_arr=to_date.split("/");
                     var   yy=parseInt(end_arr)+543;
                     var  end=end_arr[1] + "-" + end_arr[0] + "-" + yy;
-                          //  alert( begin );
-                           //    alert( end );              
-                          window.open("http://drugstore.kku.ac.th/report_pdf/appendix_report/query_report_esn_merge.php?begin=" +  begin   + "&end="  +  end    +      "&HN=undefined");
+               
+               //  window.open("http://drugstore.kku.ac.th/report_pdf/appendix_report/query_report_esn_merge.php?begin=" +  begin   + "&end="  +  end    +      "&HN=undefined");
+                                    
+              /*        
+                   if( $('#Demographic').attr('checked','cheked')    )  //Demographic :  1
+                   {
+                             alert('1');
+                   }              
+                    if(    $('#Drug').attr('checked','cheked')    )
+                   {
+                              alert('2');
+                   }
+                   if(    $('#Pharmacist').attr('checked','cheked')    )
+                   {
+                              alert('3');
+                   } 
+               */
+              
+
+                           
+                           //  alert( Demographic);
+                   
+                   
+                           var  checkreport=$('#checkreport').combobox('getValue');
+                           //alert(checkreport);
+                          if( checkreport == 1 )
+                          {
+                              //alert('1');
+                              // window.open('../../../report_pdf/appendix_report/switch_report.php?begin=' + begin + '&end=' +  end +  '&HN='  +  HN + '&checkreport=' + checkreport_  ,'mywindow',''); //#query by merg table  
+                          }
+                          else if(   checkreport == 2  )
+                          {
+                               alert('2');
+                           }
+                           else if(   checkreport == 3  )
+                          {
+                               alert('3');
+                           }
+                           
+                           
+                       
                  }
              });
         }
@@ -93,24 +131,59 @@
                 
             </tr>
             
+            <tr>
+                <td></td>
+                <td>
+                    
+                    <!--
+                    <select class="easyui-combobox" name="state" style="width:200px;">
+        <option value="1">Demographic</option>
+        <option value="2">Drug Related Problem</option>
+        <option value="3">Pharmacist Action</option>
+                       </select>
+                    -->
+                    
+                    <input class="easyui-combobox"  id="checkreport" data-options="
+                           valueField:'label',
+                           textField:'value',
+                           data:[{
+                             label:'1',value:'Demographic'
+                           }
+                           ,{  label:'2',value:'Drug' }
+                           ,{  label:'3',value:'Pharmacist' }
+                           ]
+                           ">
+                    
+                    
+                </td>
+            </tr>
+            
+            
+        <!--    
        <tr>
-            <td>Demographic :</td>
+          
             <td>
-                <input  type="radio"  id="Demographic" value="1" name="checkreport" />
+                <input  type="radio"  id="Demographic" value="1" name="checkreport" />  
             </td>
+            <td>Demographic </td>
         </tr>
               <tr>
-            <td>Drug Related Problem :</td>
+           
             <td>
-                <input  type="radio"  id="Drug" value="2" name="checkreport">
+                <input  type="radio"  id="Drug" value="2" name="checkreport"> 
             </td>
+            <td>Drug Related Problem </td>
         </tr>
         <tr>
-            <td>Pharmacist Action :</td>
+       
             <td>
-                <input  type="radio"  id="Pharmacist" value="3" name="checkreport">
+                <input  type="radio"  id="Pharmacist" value="3" name="checkreport"> 
             </td>
+            <td>Pharmacist Action</td>
+            
         </tr>
+        -->
+        
         
         <!--
         <tr>
