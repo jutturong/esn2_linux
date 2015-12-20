@@ -44,20 +44,7 @@
                
                //  window.open("http://drugstore.kku.ac.th/report_pdf/appendix_report/query_report_esn_merge.php?begin=" +  begin   + "&end="  +  end    +      "&HN=undefined");
                                     
-              /*        
-                   if( $('#Demographic').attr('checked','cheked')    )  //Demographic :  1
-                   {
-                             alert('1');
-                   }              
-                    if(    $('#Drug').attr('checked','cheked')    )
-                   {
-                              alert('2');
-                   }
-                   if(    $('#Pharmacist').attr('checked','cheked')    )
-                   {
-                              alert('3');
-                   } 
-               */
+
               
 
                            
@@ -66,19 +53,33 @@
                    
                            var  checkreport=$('#checkreport').combobox('getValue');
                            //alert(checkreport);
+                           var  HN_main=$('#HN_main').textbox('getValue');
+                           
+                           /*
                           if( checkreport == 1 )
                           {
-                              //alert('1');
-                              // window.open('../../../report_pdf/appendix_report/switch_report.php?begin=' + begin + '&end=' +  end +  '&HN='  +  HN + '&checkreport=' + checkreport_  ,'mywindow',''); //#query by merg table  
+
+                                 window.open('http://drugstore.kku.ac.th/report_pdf/appendix_report/switch_report.php?begin=' + begin + '&end=' +  end +  '&HN='  + HN_main  + '&checkreport=' + checkreport  ); //#query by merg table
                           }
                           else if(   checkreport == 2  )
                           {
-                               alert('2');
+  
+                                 window.open('http://drugstore.kku.ac.th/report_pdf/appendix_report/switch_report.php?begin=' + begin + '&end=' +  end +  '&HN='  + HN_main  + '&checkreport=' + checkreport  ); //#query by merg table
                            }
                            else if(   checkreport == 3  )
                           {
-                               alert('3');
+
+                                 window.open('http://drugstore.kku.ac.th/report_pdf/appendix_report/switch_report.php?begin=' + begin + '&end=' +  end +  '&HN='  + HN_main  + '&checkreport=' + checkreport  ); //#query by merg table
                            }
+                           */
+                          
+                          
+                          if(  checkreport  >  0  )
+                          {
+                                window.open('http://drugstore.kku.ac.th/report_pdf/appendix_report/switch_report.php?begin=' + begin + '&end=' +  end +  '&HN='  + HN_main  + '&checkreport=' + checkreport  ); //#query by merg table
+                          }
+                           
+                           
                            
                            
                        
