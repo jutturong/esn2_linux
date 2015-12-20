@@ -111,7 +111,7 @@
             
             <tr>
                 <td>
-                Frequency (time/month) :
+                Frequency (time/month) (64) :
                 </td>
                 <td>
                     <input   class="easyui-numberspinner" style="width:90px" id="frequency" name="frequency" data-options="min:1,max:100,editable:false">
@@ -121,7 +121,7 @@
             
             <tr>
                 <td>
-                    Clinical Response
+                    Clinical Response (66) :
                 </td>
                 <td>
                     <input   class="easyui-textbox" id="clinic_response" name="clinic_response" style="width:200px;height:40px" data-options="readonly:true,iconCls:'icon-print',size:'large', ">
@@ -129,7 +129,7 @@
             </tr>
             
             <tr>
-                <td>Duration of Attack</td>
+                <td>Duration of Attack (101) :</td>
                 <td>
                     <select class="easyui-combobox" name="Duration_of_Attack" id="Duration_of_Attack" style="width:200px;">
                                    <option value="1">Same</option>
@@ -140,7 +140,7 @@
             </tr>
             
             <tr>
-                <td>Severity of Attack</td>
+                <td>Severity of Attack (67) :</td>
                 <td>
                     <select class="easyui-combobox" name="Severity_of_Attack" id="Severity_of_Attack" style="width:200px;">
                                    <option value="1">Same</option>
