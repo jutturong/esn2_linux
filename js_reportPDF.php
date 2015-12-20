@@ -74,9 +74,20 @@
                            */
                           
                           
-                          if(  checkreport  >  0  )
+                          if(  checkreport  >  0  &&  HN_main.length > 0   )
                           {
                                 window.open('http://drugstore.kku.ac.th/report_pdf/appendix_report/switch_report.php?begin=' + begin + '&end=' +  end +  '&HN='  + HN_main  + '&checkreport=' + checkreport  ); //#query by merg table
+                          }
+                          else if(  checkreport  == 0 )
+                          {
+                               $.messager.show({
+                                   title:'สถานะการค้นหาข้อมูล',
+                                   msg:'ระบุชนิดของการค้นหาข้อมูลกอ่น',
+                                   timeout:5000,
+                                   showType:'slide'
+                                   
+                                   
+                               });
                           }
                            
                            
@@ -133,7 +144,10 @@
             </tr>
             
             <tr>
-                <td></td>
+                <td>
+                    ชนิดของการค้นหา :
+                    
+                </td>
                 <td>
                     
                     <!--
